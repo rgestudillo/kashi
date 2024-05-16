@@ -5,8 +5,9 @@ import Navbar from "./components/navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "openai-assistant-starter-kit",
-  description: "Use this NextJS app to kickstart your OpenAI application",
+  title: "kashi-estudillo",
+  description:
+    "Fast-learning computer science student with strong analytical skills. Passionate about developing software solutions and thrives under pressure.",
 };
 
 export default function RootLayout({
