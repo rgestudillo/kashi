@@ -17,11 +17,12 @@ export default function Home() {
       <div className="mx-auto mb-12 max-w-lg text-center mt-12">
         <div className="m-4">
           <h1 className="mb-4 text-5xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-5xl">
-            Kashi's AI-Powered Portfolio
+            Kashi&apos;s AI-Powered Portfolio
           </h1>
           <div className="mb-6 text-normal font-normal text-gray-500">
-            Welcome to my AI-powered portfolio! I'm excited to share my journey
-            with you. Feel free to explore and learn more about me and my work.
+            Welcome to my AI-powered portfolio! I&apos;m excited to share my
+            journey with you. Feel free to explore and learn more about me and
+            my work.
           </div>
           <div className="flex justify-center items-center space-x-4">
             <Link
