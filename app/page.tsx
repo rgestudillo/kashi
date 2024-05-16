@@ -33,7 +33,10 @@ export default function Home() {
                 Email Me
               </button>
             </Link>
-            <Link href="/Kashi-resume.pdf " target="_blank">
+            <Link
+              href="https://kashi-2ewc.vercel.app/Kashi-resume.pdf"
+              target="_blank"
+            >
               <button className="bg-gray-700 hover:bg-gray-800 text-white font-semibold py-2 px-4 rounded">
                 Download Resume
               </button>
