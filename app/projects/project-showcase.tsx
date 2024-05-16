@@ -13,7 +13,7 @@ export default function ProjectShowcase({ project }: ProjectShowcaseProps) {
       onClick={() => {
         window.open(project.link);
       }}
-      className="rounded-xl border bg-card text-card-foreground shadow cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring hover:bg-accent hover:text-accent-foreground"
+      className="rounded-xl border bg-card text-black shadow cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring hover:bg-accent hover:text-accent-foreground"
     >
       <div className="space-y-2 p-6">
         <div className="flex space-x-1">
@@ -22,9 +22,7 @@ export default function ProjectShowcase({ project }: ProjectShowcaseProps) {
           </h3>
           <ExternalLink height={15} width={15} />
         </div>
-        <p className="text-sm text-muted-foreground text-start">
-          {project.description}
-        </p>
+        <p className="text-sm text-black text-start">{project.description}</p>
       </div>
     </div>
   );

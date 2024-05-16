@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 px-8">
+    <div className="navbar bg-transparent px-8 text-black">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -33,7 +33,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52"
           >
             <li>
               <Link href="/projects">Projects</Link>

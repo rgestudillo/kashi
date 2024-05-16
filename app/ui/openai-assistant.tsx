@@ -154,7 +154,7 @@ export default function OpenAIAssistant({
         <input
           disabled={isLoading}
           autoFocus
-          className="border rounded w-full py-2 px-3 text-gray-70"
+          className="border rounded w-full py-2 px-3 text-gray-70 bg-white"
           onChange={handlePromptChange}
           value={prompt}
           placeholder={currentWord}
