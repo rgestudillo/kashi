@@ -73,7 +73,7 @@ export default function Home() {
             delay: 0.5,
             ease: "easeInOut",
           }}
-          className="mb-6"
+          className="mb-6 text-black"
         >
           Welcome to my{" "}
           <span className="text-blue-600 font-bold">AI-powered</span> portfolio!
