@@ -9,13 +9,13 @@ export default function Home() {
           Get to know <span className="text-blue-600 font-bold">Kashi.</span>
         </h1>
         <div className="flex justify-center text-xs gap-3 my-2 text-white ">
-          <p className="border bg-sky-400 rounded-sm border-black p-1">
+          <p className="border bg-blue-950 rounded-sm border-black p-1">
             Mobile Development
           </p>
-          <p className="border bg-sky-400 rounded-sm border-black p-1">
+          <p className="border bg-blue-950 rounded-sm border-black p-1">
             Web/3 Development
           </p>
-          <p className="border bg-sky-400 rounded-sm border-black p-1">
+          <p className="border bg-blue-950 rounded-sm border-black p-1">
             Artificial Intelligence
           </p>
         </div>
