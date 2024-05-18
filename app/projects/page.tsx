@@ -21,7 +21,7 @@ const ProjectsPage = () => {
   });
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div>Loading....</div>}>
       <div className="space-y-5 mt-5">
         {sortedProjects.map((project: Project) => (
           <ProjectShowcase
