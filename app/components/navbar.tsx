@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import {
@@ -10,6 +12,7 @@ import {
   Mail,
   Send,
 } from "lucide-react";
+import { EncryptButton } from "../ui/home-button";
 const Navbar = () => {
   return (
     <div className="navbar bg-transparent text-black">
@@ -43,8 +46,9 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
+
         <a href="/">
-          <p className="btn btn-ghost text-xl">KASHI</p>
+          <EncryptButton />
         </a>
       </div>
       <div className="navbar-center hidden lg:flex ">
