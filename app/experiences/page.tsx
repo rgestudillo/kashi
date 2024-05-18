@@ -5,7 +5,7 @@ import WorkShowcase from "./work-showcase";
 const page = () => {
   return (
     <section id="work" key="work">
-      <div className="mt-5 rounded-xl border bg-card text-black shadow">
+      <div className="mt-5 rounded-xl border border-black bg-card text-black shadow">
         <div className="p-6 space-y-6">
           {workExperiences.map((experience: WorkExperience, index: number) => (
             <WorkShowcase

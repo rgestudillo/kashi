@@ -6,19 +6,24 @@ export default function Home() {
     <main>
       <div className="m-4">
         <h1 className="mb-4 text-5xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-5xl">
-          Kashi&apos;s AI-Powered Portfolio
+          Get to Know Kashi.
         </h1>
-        <div className="mb-6 text-normal font-normal text-gray-500">
-          Welcome to my AI-powered portfolio! I&apos;m excited to share my
-          journey with you. Feel free to explore and learn more about me and my
-          work.
+
+        <div className="mb-6 text-normal font-normal text-cyan-950">
+          Welcome to my{" "}
+          <span className="text-blue-600 font-bold">AI-powered</span> portfolio!
+          I&apos;m excited to share my journey with you.{" "}
+          <span className="text-blue-600 font-bold">
+            Ask me anything below!
+          </span>
         </div>
+
         <div className="flex justify-center items-center space-x-4">
           <Link
             className="alternative_contact"
             href="mailto:rgestudillo@up.edu.ph"
           >
-            <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">
+            <button className="bg-blue-700 hover:bg-blue-500 active:scale-95 duration-200 text-white font-semibold py-2 px-4 rounded">
               Email Me
             </button>
           </Link>
@@ -26,7 +31,7 @@ export default function Home() {
             href="https://kashi-2ewc.vercel.app/Kashi-resume.pdf"
             target="_blank"
           >
-            <button className="bg-gray-700 hover:bg-gray-800 text-white font-semibold py-2 px-4 rounded">
+            <button className="bg-blue-700 hover:bg-blue-500  text-white font-semibold py-2 px-4 rounded">
               Download Resume
             </button>
           </Link>

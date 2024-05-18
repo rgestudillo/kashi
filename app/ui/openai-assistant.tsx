@@ -111,7 +111,7 @@ export default function OpenAIAssistant({
   const [placeholder, setPlaceholder] = useState("");
 
   const words = [
-    "Ask anything about myself",
+    "Tell me about yourself",
     "What are your projects?",
     "What are your experiences?",
   ];
@@ -145,7 +145,7 @@ export default function OpenAIAssistant({
   }, [currentIndex, currentWordIndex, isDeleting]);
 
   return (
-    <div className="flex flex-col bg-slate-200 shadow-md relative">
+    <div className="flex flex-col  rounded-md relative">
       {/* <OpenAIAssistantMessage message={greetingMessage} /> */}
       {latestQuestion && <OpenAIAssistantMessage message={latestQuestion} />}
       {latestMessage && <OpenAIAssistantMessage message={latestMessage} />}
@@ -163,14 +163,14 @@ export default function OpenAIAssistant({
         {isLoading ? (
           <button
             disabled
-            className="ml-2  bg-blue-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="ml-2  bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
             <OpenAISpinner />
           </button>
         ) : (
           <button
             disabled={prompt.length == 0}
-            className="ml-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="ml-2 bg-blue-700 hover:bg-blue-800 active:scale-95 duration-200 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
             <AiOutlineSend />
           </button>
