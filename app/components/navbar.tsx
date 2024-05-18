@@ -36,28 +36,31 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52 bg-blue-950 text-white"
           >
             <li>
-              <a href="/projects">Projects</a>
+              <a href="/projects">Project</a>
             </li>
             <li>
               <a href="/experiences">Experiences</a>
             </li>
           </ul>
         </div>
-
         <a href="/">
           <EncryptButton />
         </a>
       </div>
       <div className="navbar-center hidden lg:flex ">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu-horizontal px-1 gap-3">
           <li>
-            <a href="/projects">Projects</a>
+            <a href="/projects">
+              <DrawOutlineButton>Projects</DrawOutlineButton>
+            </a>
           </li>
           <li>
-            <a href="/experiences">Experiences</a>
+            <a href="/experiences">
+              <DrawOutlineButton>Experiences</DrawOutlineButton>
+            </a>
           </li>
         </ul>
       </div>
@@ -79,6 +82,35 @@ const Navbar = () => {
         </ul>
       </div>
     </div>
+  );
+};
+
+const DrawOutlineButton = ({
+  children,
+  ...rest
+}: React.DetailedHTMLProps<
+  React.ButtonHTMLAttributes<HTMLButtonElement>,
+  HTMLButtonElement
+>) => {
+  return (
+    <button
+      {...rest}
+      className="group relative px-4 py-2 font-medium text-black transition-colors duration-[400ms] hover:text-blue-950"
+    >
+      <span>{children}</span>
+
+      {/* TOP */}
+      <span className="absolute left-0 top-0 h-[2px] w-0 bg-blue-950 transition-all duration-100 group-hover:w-full" />
+
+      {/* RIGHT */}
+      <span className="absolute right-0 top-0 h-0 w-[2px] bg-blue-950 transition-all delay-100 duration-100 group-hover:h-full" />
+
+      {/* BOTTOM */}
+      <span className="absolute bottom-0 right-0 h-[2px] w-0 bg-blue-950 transition-all delay-200 duration-100 group-hover:w-full" />
+
+      {/* LEFT */}
+      <span className="absolute bottom-0 left-0 h-0 w-[2px] bg-blue-950 transition-all delay-300 duration-100 group-hover:h-full" />
+    </button>
   );
 };
 

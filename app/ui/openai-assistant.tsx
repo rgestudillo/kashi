@@ -104,7 +104,6 @@ export default function OpenAIAssistant({
     });
   }
 
-  // handles changes to the prompt input field
   function handlePromptChange(e: React.ChangeEvent<HTMLInputElement>) {
     setPrompt(e.target.value);
   }
@@ -115,6 +114,7 @@ export default function OpenAIAssistant({
     "What are your experiences?",
     "What are your tech stacks?",
     "Why should we hire you?",
+    "Tell me about her",
   ];
 
   const [currentWordIndex, setCurrentWordIndex] = useState(0);

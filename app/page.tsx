@@ -24,19 +24,19 @@ export default function Home() {
           className="flex justify-center text-xs gap-3 text-white "
         >
           <a
-            className="border bg-blue-950 hover:bg-blue-500 rounded-sm border-black p-1"
+            className="border bg-blue-950 hover:bg-blue-500 rounded-md border-black px-3 py-1"
             href="/projects?category=mobile"
           >
             Mobile Development
           </a>
           <a
-            className="border bg-blue-950 hover:bg-blue-500 rounded-sm border-black p-1"
+            className="border bg-blue-950 hover:bg-blue-500 rounded-md border-black px-3 py-1"
             href="/projects?category=web"
           >
             Web/3 Development
           </a>
           <a
-            className="border bg-blue-950 hover:bg-blue-500 rounded-sm border-black p-1"
+            className="border bg-blue-950 hover:bg-blue-500 rounded-md border-black px-3 py-1"
             href="/projects?category=ai"
           >
             Artificial Intelligence
