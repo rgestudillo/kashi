@@ -5,21 +5,30 @@ export default function Home() {
   return (
     <main>
       <div className="m-4">
-        <h1 className="text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-5xl">
+        <div className="flex justify-center text-xs gap-3 text-white ">
+          <a
+            className="border bg-blue-950 hover:bg-blue-500 rounded-sm border-black p-1"
+            href="/projects?category=mobile"
+          >
+            Mobile Development
+          </a>
+          <a
+            className="border bg-blue-950 hover:bg-blue-500 rounded-sm border-black p-1"
+            href="/projects?category=web"
+          >
+            Web/3 Development
+          </a>
+          <a
+            className="border bg-blue-950 hover:bg-blue-500 rounded-sm border-black p-1"
+            href="/projects?category=ai"
+          >
+            Artificial Intelligence
+          </a>
+        </div>
+        <h1 className="mb-6  mt-3 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-5xl">
           Get to know <span className="text-blue-600 font-bold">Kashi.</span>
         </h1>
-        <div className="flex justify-center text-xs gap-3 my-2 text-white ">
-          <p className="border bg-blue-950 rounded-sm border-black p-1">
-            Mobile Development
-          </p>
-          <p className="border bg-blue-950 rounded-sm border-black p-1">
-            Web/3 Development
-          </p>
-          <p className="border bg-blue-950 rounded-sm border-black p-1">
-            Artificial Intelligence
-          </p>
-        </div>
-        <div className="mt-8 mb-3 text-normal font-normal text-cyan-950">
+        <div className="mb-4 text-normal font-normal text-cyan-950">
           Welcome to my{" "}
           <span className="text-blue-600 font-bold">AI-powered</span> portfolio!
           I&apos;m excited to share my journey with you.{" "}
@@ -41,7 +50,7 @@ export default function Home() {
             href="https://kashi-2ewc.vercel.app/Kashi-resume.pdf"
             target="_blank"
           >
-            <button className="bg-blue-700 hover:bg-blue-500  text-white font-semibold py-2 px-4 rounded">
+            <button className="bg-blue-950  hover:bg-blue-500  text-white font-semibold py-2 px-4 rounded">
               Download Resume
             </button>
           </Link>
