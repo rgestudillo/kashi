@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { Suspense, useEffect } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import { Project, projects } from "@/lib/data";
 import ProjectShowcase from "./project-showcase";
@@ -21,15 +21,17 @@ const ProjectsPage = () => {
   });
 
   return (
-    <div className="space-y-5 mt-5">
-      {sortedProjects.map((project: Project) => (
-        <ProjectShowcase
-          extraInfo={category || undefined}
-          key={project.title}
-          project={project}
-        />
-      ))}
-    </div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <div className="space-y-5 mt-5">
+        {sortedProjects.map((project: Project) => (
+          <ProjectShowcase
+            extraInfo={category || undefined}
+            key={project.title}
+            project={project}
+          />
+        ))}
+      </div>
+    </Suspense>
   );
 };
 
