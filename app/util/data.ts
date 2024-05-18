@@ -88,7 +88,7 @@ export const experience = [
       "Flutter",
       "Firebase",
       "Google Cloud Platform",
-      "Integrated Testing",
+
     ],
   },
   {
@@ -119,7 +119,7 @@ export const experience = [
     tech: ["Android" , "Java", "Shell Script", "Digital Ocean"],
   },
   {
-    title: "University of the Philippines - Cebu",
+    title: "University of the Philippines",
     position: "Computer Science Student",
     time: "2021 - Present",
     location: "Cebu City",
@@ -130,8 +130,7 @@ export const experience = [
       "Java",
       "Python",
       "RStudio",
-      "Javascript",
-      "Dart",
+      "Calculus",
     ],
   },
 ];
