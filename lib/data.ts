@@ -5,16 +5,30 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-
   {
-    title: "Gauss-Jordan Calculator",
-    description: "Gauss-Jordan elimination-based calculator for solving systems of linear equations up to 3 unknowns and 4 equations. Fast, accurate, and hassle-free.",
-    link: "https://gauss-jordan.vercel.app/", 
+    title: "Folderly",
+    description: "Folderly is a Flutter-based application designed to simplify and enhance the academic experience for students with AI Technology.",
+    link: "https://folderly.online/", 
+  },
+  {
+    title: "ENTERn",
+    description: "A Flutter-based application leveraging GPT-4 API to analyze data, aimed at assisting inexperienced students in finding internships and entering the industry.",
+    link: "", 
+  },
+  {
+    title: "a2z Ideas",
+    description: "A Flutter-based platform designed to connect users with businesses, facilitating the sharing of dating ideas and the promotion of businesses.",
+    link: "https://github.com/rgestudillo/a2z", 
   },
   {
     title: "NPA Compiler",
     description: "A full-stack web application programming language compiler. It offers dynamic syntax for flexible coding, a compiler certification tool, and a time complexity calculator to optimize algorithm efficiency.",
     link: "https://npa.debmac.tech/", 
+  },
+  {
+    title: "Gauss-Jordan Calculator",
+    description: "A web app that integrates Gauss-Jordan elimination-based calculator for solving systems of linear equations up to 3 unknowns and 4 equations. Fast, accurate, and hassle-free.",
+    link: "https://gauss-jordan.vercel.app/", 
   },
   {
     title: "Flower Language",
@@ -41,16 +55,7 @@ export const projects: Project[] = [
     description: "A web app that uses voice recognition in a file explorer.",
     link: "https://debmac-phase-1.vercel.app/editor"
   },
-  {
-    title: "a2z Ideas",
-    description: "A platform designed to connect users with businesses, facilitating the sharing of dating ideas and the promotion of businesses.",
-    link: "https://github.com/rgestudillo/a2z", 
-  },
-  {
-    title: "ENTERn",
-    description: "A Flutter-based application leveraging GPT-4 API to analyze data, aimed at assisting inexperienced students in finding internships and entering the industry.",
-    link: "", 
-  },
+
   {
     title: "Hatud",
     description: "A mobile-friendly web application developed using JavaScript, HTML, and CSS, seamlessly integrated with external APIs such as OpenStreetMap for precise school bus tracking and accurate real-time updates.",

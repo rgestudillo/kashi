@@ -108,13 +108,15 @@ export default function OpenAIAssistant({
   function handlePromptChange(e: React.ChangeEvent<HTMLInputElement>) {
     setPrompt(e.target.value);
   }
-  const [placeholder, setPlaceholder] = useState("");
 
   const words = [
     "Tell me about yourself",
     "What are your projects?",
     "What are your experiences?",
+    "What are your tech stacks?",
+    "Why should we hire you?",
   ];
+
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentWord, setCurrentWord] = useState("");
@@ -170,7 +172,7 @@ export default function OpenAIAssistant({
         ) : (
           <button
             disabled={prompt.length == 0}
-            className="ml-2 bg-blue-700 hover:bg-blue-800 active:scale-95 duration-200 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="ml-2 bg-blue-700 hover:bg-blue-500  active:scale-95 duration-200 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
             <AiOutlineSend />
           </button>

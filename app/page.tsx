@@ -5,11 +5,21 @@ export default function Home() {
   return (
     <main>
       <div className="m-4">
-        <h1 className="mb-4 text-5xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-5xl">
-          Get to Know Kashi.
+        <h1 className="text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-5xl">
+          Get to know <span className="text-blue-600 font-bold">Kashi.</span>
         </h1>
-
-        <div className="mb-6 text-normal font-normal text-cyan-950">
+        <div className="flex justify-center text-xs gap-3 my-2 text-white ">
+          <p className="border bg-sky-400 rounded-sm border-black p-1">
+            Mobile Development
+          </p>
+          <p className="border bg-sky-400 rounded-sm border-black p-1">
+            Web/3 Development
+          </p>
+          <p className="border bg-sky-400 rounded-sm border-black p-1">
+            Artificial Intelligence
+          </p>
+        </div>
+        <div className="mt-8 mb-3 text-normal font-normal text-cyan-950">
           Welcome to my{" "}
           <span className="text-blue-600 font-bold">AI-powered</span> portfolio!
           I&apos;m excited to share my journey with you.{" "}
