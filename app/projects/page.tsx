@@ -21,18 +21,24 @@ const ProjectsPage = () => {
   });
 
   return (
-    <Suspense fallback={<div>Loading....</div>}>
-      <div className="space-y-5 mt-5">
-        {sortedProjects.map((project: Project) => (
-          <ProjectShowcase
-            extraInfo={category || undefined}
-            key={project.title}
-            project={project}
-          />
-        ))}
-      </div>
+    <div className="space-y-5 mt-5">
+      {sortedProjects.map((project: Project) => (
+        <ProjectShowcase
+          extraInfo={category || undefined}
+          key={project.title}
+          project={project}
+        />
+      ))}
+    </div>
+  );
+};
+
+const ProjectsPageWithSuspense = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ProjectsPage />
     </Suspense>
   );
 };
 
-export default ProjectsPage;
+export default ProjectsPageWithSuspense;
