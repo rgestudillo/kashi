@@ -2,7 +2,7 @@
 
 import React, { Suspense, useEffect } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
-import { Project, projects } from "@/lib/data";
+import { Project, projects } from "../util/data";
 import ProjectShowcase from "./project-showcase";
 
 const ProjectsPage = () => {

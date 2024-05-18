@@ -75,50 +75,63 @@ export const projects: Project[] = [
   },
 ];
 
-
-export interface WorkExperience {
-  company: string;
-  logo: string;
-  position: string;
-  description: string;
-  years: string;
-}
-
-export const workExperiences: WorkExperience[] = [
+export const experience = [
   {
-    company: "Full-Stack Lead Developer",
-    logo: "/company-logo.png",
-    position: "",
-    description: "Led full-stack development of Folderly platform with AI-driven flashcards for study efficiency and managed database integrity, performance, and security, optimizing costs with Google Cloud Platform hosting.",
-    years: "Dec, 2023 - Present",
+    title: "Folderly",
+    position: "Full-Stack Lead Developer",
+    time: "Dec, 2023 - Present",
+    location: "Cebu City",
+    description:
+      "Led full-stack development of Folderly platform with AI-driven flashcards for study efficiency and managed database integrity, performance, and security, optimizing costs with Google Cloud Platform hosting.",
+    tech: [
+      "Dart",
+      "Flutter",
+      "Firebase",
+      "Google Cloud Platform",
+      "Integrated Testing",
+    ],
   },
   {
-    company: "Cybersecurity Intern",
-    logo: "/company-logo.png", 
-    position: "",
-    description: "Implemented a cybersecurity solution that integrates AI and real-time surveillance to enhance ATM security.",
-    years: "Jun, 2023 - Sep, 2023",
+    title: "NCR Atleos",
+    position: "Research and Development Intern",
+    time: "Jun, 2023 - Sep, 2023",
+    location: "Cebu City",
+    description:
+      "Implemented a cybersecurity solution that integrates AI and real-time surveillance to enhance ATM security.",
+    tech: ["Python", "AI", "Computer Vision", "Data Science"],
   },
   {
-    company: "Freelance Web3 Developer",
-    logo: "/company-logo.png", 
+    title: "Solana",
     position: "Freelance Web3 Developer",
-    description: "Developed Solana minting web app with presale features and landing pages to attract users and investors.",
-    years: "2021 - 2023",
+    time: "2021 - 2023",
+    location: "Remote",
+    description:
+      "Developed Solana minting web app with presale features and landing pages to attract users and investors.",
+    tech: ["Cryptocurrency", "Web3" ,"Rust", "Next JS", "React JS"],
   },
   {
-    company: "CuteVPN Founder",
-    logo: "/company-logo.png", 
+    title: "CuteVPN",
     position: "Founder and Sole Developer",
-    description: "Enhanced OpenVPN Android app, developed Debian 9 auto-install script, and implemented remote MySQL solution for efficient client data management and security compliance.",
-    years: "2020 - 2021",
+    time: "2020 - 2021",
+    location: "Cebu City",
+    description:
+      "Enhanced OpenVPN Android app, developed Debian 9 auto-install script, and implemented remote MySQL solution for efficient client data management and security compliance.",
+    tech: ["Android" , "Java", "Shell Script", "Digital Ocean"],
   },
   {
-    company: "Computer Science Student ",
-    logo: "/company-logo.png", 
-    position: " ",
-    description: "University of the Philippines - Cebu | 1.4 GPA | National Scholar under DOST-SEI RA7687 Scholarship",
-    years: "2021 - Present",
+    title: "University of the Philippines - Cebu",
+    position: "Computer Science Student",
+    time: "2021 - Present",
+    location: "Cebu City",
+    description:
+      "1.4 GPA | National Scholar under DOST-SEI RA7687 Scholarship.",
+    tech: [
+      "C/C++",
+      "Java",
+      "Python",
+      "RStudio",
+      "Javascript",
+      "Dart",
+    ],
   },
 ];
-

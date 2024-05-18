@@ -1,21 +1,13 @@
+"use client";
 import React from "react";
-
-import { WorkExperience, workExperiences } from "@/lib/data";
-import WorkShowcase from "./work-showcase";
+import { experience } from "../util/data";
+import { ExperienceItem } from "./ExperienceItem";
 const page = () => {
   return (
-    <section id="work" key="work">
-      <div className="mt-5 rounded-xl border border-black bg-card text-black shadow">
-        <div className="p-6 space-y-6">
-          {workExperiences.map((experience: WorkExperience, index: number) => (
-            <WorkShowcase
-              key={experience.company}
-              experience={experience}
-              whetherlast={workExperiences.length == index + 1}
-            />
-          ))}
-        </div>
-      </div>
+    <section className="section-wrapper" id="experience">
+      {experience.map((item) => (
+        <ExperienceItem key={item.title} {...item} />
+      ))}
     </section>
   );
 };

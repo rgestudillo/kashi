@@ -1,4 +1,4 @@
-import { Project } from "@/lib/data";
+import { Project } from "../util/data";
 import { ExternalLink } from "lucide-react";
 
 interface ProjectShowcaseProps {
