@@ -4,6 +4,8 @@ import { AssistantStream } from "openai/lib/AssistantStream";
 import { useState, useRef, useEffect } from "react";
 import { AiOutlineUser, AiOutlineRobot, AiOutlineSend } from "react-icons/ai";
 import Markdown from "react-markdown";
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "../config"; // Adjust the import path as needed
 
 interface Message {
   id: string;
@@ -48,7 +50,17 @@ export default function OpenAIAssistant({
       createdAt: new Date(),
     };
     setLatestQuestion(userMessage);
-    // setLatestMessage(userMessage);
+
+    // Save the question to Firestore
+    try {
+      await addDoc(collection(db, "questions"), {
+        question: userMessage.content,
+        date: userMessage.createdAt,
+      });
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
+
     setPrompt("");
 
     // post new message to server and stream OpenAI Assistant response
@@ -147,7 +159,7 @@ export default function OpenAIAssistant({
   }, [currentIndex, currentWordIndex, isDeleting]);
 
   return (
-    <div className="flex flex-col  rounded-md relative">
+    <div className="flex flex-col rounded-md relative">
       {/* <OpenAIAssistantMessage message={greetingMessage} /> */}
       {latestQuestion && <OpenAIAssistantMessage message={latestQuestion} />}
       {latestMessage && <OpenAIAssistantMessage message={latestMessage} />}
@@ -165,14 +177,14 @@ export default function OpenAIAssistant({
         {isLoading ? (
           <button
             disabled
-            className="ml-2  bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="ml-2 bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
             <OpenAISpinner />
           </button>
         ) : (
           <button
-            disabled={prompt.length == 0}
-            className="ml-2 bg-blue-700 hover:bg-blue-500  active:scale-95 duration-200 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            disabled={prompt.length === 0}
+            className="ml-2 bg-blue-700 hover:bg-blue-500 active:scale-95 duration-200 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
             <AiOutlineSend />
           </button>
