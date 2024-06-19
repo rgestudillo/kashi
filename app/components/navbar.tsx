@@ -44,6 +44,9 @@ const Navbar = () => {
             <li>
               <a href="/experiences">Experiences</a>
             </li>
+            <li>
+              <a href="/blog">Blogs</a>
+            </li>
           </ul>
         </div>
         <a href="/">
@@ -60,6 +63,11 @@ const Navbar = () => {
           <li>
             <a href="/experiences">
               <DrawOutlineButton>Experiences</DrawOutlineButton>
+            </a>
+          </li>
+          <li>
+            <a href="/blog">
+              <DrawOutlineButton>Blogs</DrawOutlineButton>
             </a>
           </li>
         </ul>
