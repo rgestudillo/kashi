@@ -7,6 +7,8 @@ interface Question {
     id: string;
     question: string;
     date: Date;
+    answer: string;
+    ip: string;
 }
 
 export default function HistoryPage() {
@@ -28,8 +30,14 @@ export default function HistoryPage() {
                     id: doc.id,
                     question: data.question,
                     date: date,
+                    answer: data.answer,
+                    ip: data.ip,
                 });
             });
+
+            // Sort questions by date in descending order
+            questionsList.sort((a, b) => b.date.getTime() - a.date.getTime());
+
             setQuestions(questionsList);
             setLoading(false);
         }
@@ -72,14 +80,22 @@ export default function HistoryPage() {
 
     return (
         <div className="container mx-auto p-4">
-            <h1 className="text-2xl font-bold mb-4">Question History</h1>
+            <h1 className="text-2xl font-bold mb-4 text-blue-800">Question History</h1>
             <ul>
                 {questions.map((question) => (
-                    <li key={question.id} className="mb-4 p-4 border rounded shadow-sm">
-                        <p className="text-lg font-semibold">{question.question}</p>
-                        <p className="text-gray-500">{question.date.toLocaleString()}</p>
-                    </li>
+                    <div key={question.id} className="collapse bg-base-200 mb-4 border rounded border-black shadow-sm">
+                        <input type="checkbox" />
+                        <div className="collapse-title bg-white text-black p-4">
+                            {question.question}
+                            <p className="text-gray-500">{question.date.toLocaleString()}</p>
+                        </div>
+                        <div className="collapse-content bg-white">
+                            <p className="text-justify text-gray-500">{question.answer}</p>
+                            <p className="text-red-500 mt-2">{question.ip}</p>
+                        </div>
+                    </div>
                 ))}
+
             </ul>
         </div>
     );

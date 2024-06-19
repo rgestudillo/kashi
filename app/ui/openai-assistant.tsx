@@ -24,7 +24,22 @@ export default function OpenAIAssistant({
   const [latestMessage, setLatestMessage] = useState<Message | null>(null);
   const messageId = useRef(0);
   const [latestQuestion, setLatestQuestion] = useState<Message | null>(null);
+  const [userIp, setUserIp] = useState("");
   // set default greeting Message
+
+  useEffect(() => {
+    async function fetchIp() {
+      try {
+        const res = await fetch("https://api.ipify.org?format=json");
+        const data = await res.json();
+        setUserIp(data.ip);
+      } catch (e) {
+        console.error("Error fetching IP address: ", e);
+      }
+    }
+    fetchIp();
+  }, []);
+
   const greetingMessage = {
     id: "greeting",
     role: "assistant",
@@ -51,15 +66,7 @@ export default function OpenAIAssistant({
     };
     setLatestQuestion(userMessage);
 
-    // Save the question to Firestore
-    try {
-      await addDoc(collection(db, "questions"), {
-        question: userMessage.content,
-        date: userMessage.createdAt,
-      });
-    } catch (e) {
-      console.error("Error adding document: ", e);
-    }
+
 
     setPrompt("");
 
@@ -92,7 +99,7 @@ export default function OpenAIAssistant({
       setLatestMessage(streamingMessage);
     });
 
-    runner.on("messageDone", (message) => {
+    runner.on("messageDone", async (message) => {
       // get final message content
       const finalContent =
         message.content[0].type == "text" ? message.content[0].text.value : "";
@@ -106,7 +113,17 @@ export default function OpenAIAssistant({
         createdAt: new Date(),
       };
       setLatestMessage(assistantMessage);
-
+      // Save the question to Firestore
+      try {
+        await addDoc(collection(db, "questions"), {
+          question: userMessage.content,
+          date: userMessage.createdAt,
+          answer: finalContent,
+          ip: userIp,
+        });
+      } catch (e) {
+        console.error("Error adding document: ", e);
+      }
       // remove busy indicator
       setIsLoading(false);
     });
